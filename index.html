@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Resume Builder</h1>
+        <form id="resume-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="job-title">Job Title:</label>
+                <input type="text" id="job-title" required>
+            </div>
+            <div class="form-group">
+                <label for="upload-pic">Upload Profile Picture:</label>
+                <input type="file" id="upload-pic" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills (comma separated):</label>
+                <input type="text" id="skills" required>
+            </div>
+            <div class="form-group">
+                <label for="education">Education (comma separated):</label>
+                <input type="text" id="education" required>
+            </div>
+            <div class="form-group">
+                <label for="objective">Objective:</label>
+                <textarea id="objective" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="personal-info">Personal Information:</label>
+                <textarea id="personal-info" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="certificates">Certificates (comma separated):</label>
+                <input type="text" id="certificates" required>
+            </div>
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+
+    <div class="resume-container">
+        <aside class="sidebar">
+            <img id="profile-pic" src="Profile Pic.jpg" alt="Profile Picture" class="profile-pic">
+            <h1 id="resume-name">Your Name</h1>
+            <p class="job-title" id="resume-job-title">Job Title</p>
+            <div class="personal-info">
+                <h2>Personal Information</h2>
+                <ul id="personal-info-list">
+                    <li><strong>Email:</strong> <span id="resume-email">example@example.com</span></li>
+                    <!-- Additional personal info will be added here -->
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="section education">
+                <h2>Education</h2>
+                <ul id="education-list"></ul>
+            </section>
+            <section class="section objective">
+                <h2>Objective</h2>
+                <p id="resume-objective">Your objective text will appear here.</p>
+            </section>
+            <section class="section skills">
+                <h2>Skills</h2>
+                <ul id="skills-list"></ul>
+            </section>
+            <section class="section certificates">
+                <h2>Certificates</h2>
+                <ul id="certificates-list"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
